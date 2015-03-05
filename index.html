@@ -14,6 +14,12 @@
 
 <style>
 *{list-style: none; margin: 0;}
+.header{
+	position: fixed; width: 100%; z-index: 1000;
+}
+.content{
+	margin-top: 30px;
+}
 .menustyle{
 	position: relative; top: 10px; left: 5px;
 }
@@ -31,7 +37,7 @@
 	left: 10px;
 }
 .mainbutton{
-	border-radius: 0px; width: 40%; color: #FFF !important; text-shadow: none !important;
+	border-radius: 0px; width: 80%; color: #FFF !important; text-shadow: none !important;
 }
 .decor{
 	text-decoration: none;
@@ -41,20 +47,10 @@
 <body>
 
 <div data-role="page" id="tableOfContent" data-theme="a">
-	<div data-role="header" class="header" >
-		<div style="float: left;" >
-			<a href="#mainmenu" ><div class="bars-top" ></div></a>
-		</div>
-		<h1>آموزش جامع بوم بیچ</h1>
+	<div data-role="header" class="header">
+    <h1>آموزش جامع بوم بیچ</h1>
 	</div>
 	<div data-role="content" class="content">
-    	<div data-role="panel" data-position="left" data-display="overlay" id="mainmenu" >
-        <ul data-role="listview">
-		    <li><a href="#callus">تماس با ما</a></li>
-		    <li><a href="#aboutp">درباره برنامه</a></li>
-	     </ul>
-         <a href="#my-header" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
-    	</div>
         <div align="center" >
         	<a href="#intro" class="decor" ><div data-role="button" class="ui-btn ui-shadow mainbutton" style="background: #41C5C5;" >
             مقدمه
@@ -72,7 +68,9 @@
             <!--<a href="#naghshe" class="decor" ><div data-role="button" class="ui-btn ui-shadow mainbutton"style="background: #BBB543;">
             نقشه های دفاعی
             </div></a>-->
-            <a href="#character" class="decor" ><div data-role="button" class="ui-btn ui-shadow mainbutton" >کاراکتر های بازی</div></a>
+            <a href="#character" class="decor" ><div data-role="button" class="ui-btn ui-shadow mainbutton" style="background: #F986EC;" >کاراکتر های بازی</div></a>
+            <a href="#callus" class="decor" ><div data-role="button" class="ui-btn ui-shadow mainbutton" >تماس با ما</div></a>
+            <a href="#aboutp" class="decor" ><div data-role="button" class="ui-btn ui-shadow mainbutton" >درباره برنامه</div></a>
         </div>
     </div>
 </div>
@@ -80,18 +78,20 @@
 <div data-role="page" id="intro">
 	<div data-role="header" class="header">
     <div style="float: left;" >
-			<a href="#mainmenu"><div class="bars-top" ></div></a>
+			<a href="#mainm" class="jqm-navmenu-link ui-nodisc-icon ui-alt-icon ui-btn-left ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
 		</div>
 		<h1>مقدمه</h1>
 	</div>
 	<div data-role="content" class="content">
-		<div data-role="panel" data-position="left" data-display="overlay" id="mainmenu" >
-		  <ul data-role="listview">
+		<div data-role="panel" data-position="left" data-display="overlay" id="mainm" >
+		  <div class="ui-panel-inner">
+          <ul data-role="listview">
 		    <li><a href="#tableOfContent">فهرست</a></li>
 		    <li><a href="#callus">تماس با ما</a></li>
 		    <li><a href="#aboutp">درباره برنامه</a></li>
 	      </ul>
-          <a href="#my-header" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
+          <a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
+          </div>
     	</div>
       <p dir="RTL">بازی  های استراتژی همیشه بخشی از بازی های محبوب را تشکیل میدادند! با معرفی بازی جنگ  قبیله ها میتوان گفت بازی های استراتژی به گجت هایی که بیشتر در دسترس ما قرار  داشت راه یافت. بازی دیگر شرکت Supercell‌(سازنده  بازی جنگ قبیله ها) Boom  Beach نام  دارد که میتوان گفت به اندازه Clash Of Clans  دوست داشتنی است و یا شاید در مواردی دوست داشتنی تر!<br>
           برای  اینکه از این بازی بهتر سر در بیاورید و قبل از اینکه کاربران بیشتری به سوی این  بازی کشیده شوند جایگاه خود را در این بازی محکم کنید این اپلیکیشن آماده سازی شده  است!<br>
@@ -100,21 +100,23 @@
 </div>
 
 <div data-role="page" id="Amoozesh">
-	<div data-role="header" class="header">
+	<div data-role="header" class="header" >
     <div style="float: left;" >
-			<a href="#mainmenu"><div class="bars-top" ></div></a>
+			<a href="#mainm" class="jqm-navmenu-link ui-nodisc-icon ui-alt-icon ui-btn-left ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
 		</div>
 		<h1>آموزش های مقدماتی</h1>
 	</div>
-	<div data-role="content" class="content">
-		<div data-role="panel" data-position="left" data-display="overlay" id="mainmenu" >
+	<div data-role="content" class="content" style="margin-top: 30px;">
+		<div data-role="panel" data-position="left" data-display="overlay" id="mainm" >
+        <div class="ui-panel-inner">
         <ul data-role="listview">
 		    <li><a href="#tableOfContent">فهرست</a></li>
 		    <li><a href="#callus">تماس با ما</a></li>
 		    <li><a href="#aboutp">درباره برنامه</a></li>
          </ul>
-          <a href="#my-header" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
+          <a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
     	</div>
+        </div>
         <div data-role="tabs">
       <div data-role="navbar">
         <ul>
@@ -123,7 +125,8 @@
         </ul>
       </div>
       <div id="fragment-1">
-      <p><center><img src="images/BoomBeach_01.png" width="80%" style="margin: 20px auto 20px;" /></center></p>
+      <p><center><a href="#jazireN" data-rel="popup" data-position-to="window" data-transition="flow" ><img src="images/BoomBeach_01.png" width="80%" style="margin: 20px auto 20px;" /></a><div data-role="popup" id="jazireN" data-overlay-theme="a" data-theme="a" data-corners="false" style="width:960px; height: 600px;">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/BoomBeach_01.png" style="width: 960px; height: 600px;" /></div></center></p>
         <p dir="RTL">در این بخش ابتدا به معرفی ابتدایی اجزای بازی میپردازیم؛ همچنین شما  نیز اگر سوالی در رابطه با بخشی از بازی دارید میتوانید از طریق ایمیلی که در بخش  تماس با ما قرار داده شده استفاده کنید! این حق شماست که بپرسید و بیشتر بدانید!</p>
         <p dir="RTL"><span dir="RTL"> </span><span dir="RTL"> </span><span dir="RTL"> </span><span dir="RTL"> </span>1- نام شما در بازی که مانند  بازی کلش آف کلنز قابل عوض شدن نیست. <br>
           2- ویکتوری پوینت (<span dir="LTR">Victory Point</span><span dir="RTL"> </span><span dir="RTL"> </span><span dir="RTL"> </span><span dir="RTL"> </span>) یا امتیازی پیروزی که در  مراحل اول با نجات جزایر دیگر که در تصویرهای بعدی مشاهده خواهیم کرد بدست می آورید  و در لول های بالا با آزاد کردن مکان های جدید در نقشه هم این امتیاز به دست می آید. <br>
@@ -143,7 +146,8 @@
           16- زیر دریایی که در لول های بالا بدست  می آید و در رادار بالای 7 در نقشه مکانهایی پدید می آید که با آن می توانید از این  مکان ها منابع و جواهرات بدست آورید. <br>
 <span dir="rtl">17- دکمه ی رفتن به نقشه ی حمله که در تب بعدی توضیح داده شده.</span></p></div>
       <div id="fragment-2">
-      <p><center><img src="images/BoomBeach_02.png" width="80%" style="margin: 20px auto 20px;" /></center></p>
+      <p><center><a href="#fightN" data-rel="popup" data-position-to="window" data-transition="flow" ><img src="images/BoomBeach_02.png" width="80%" style="margin: 20px auto 20px;" /></a></center><div data-role="popup" id="fightN" data-overlay-theme="a" data-theme="a" data-corners="false" style="width:960px; height: 600px;">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="images/BoomBeach_02.png" style="width: 960px; height: 600px;" /></div></p>
         <p dir="RTL"><span dir="RTL"> </span><span dir="RTL"> </span><span dir="RTL"> </span><span dir="RTL"> </span>1- منوی حملات اخیر به شما. <br>
           2- جزیره ای از نوع منابع که در دست شماست. <br>
           3- جزیره یک بازیکن دیگر که می توانید به  آن حمله کنید یا بعد 24 ساعت که حمله نکردید و سخت بود با زدن <span dir="LTR">Find New</span><span dir="RTL"> </span><span dir="RTL"> </span><span dir="RTL"> </span><span dir="RTL"> </span> یک حریف جدید  پیدا کنید. <br>
@@ -163,20 +167,22 @@
 <div data-role="page" id="tosie">
 	<div data-role="header" class="header">
     <div style="float: left;" >
-			<a href="#mainmenu"><div class="bars-top" ></div></a>
+			<a href="#mainm" class="jqm-navmenu-link ui-nodisc-icon ui-alt-icon ui-btn-left ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
 		</div>
 		<h1>شاید برای شما هم پیش بیاید</h1>
 	</div>
 	<div data-role="content" class="content">
-		<div data-role="panel" data-position="left" data-display="overlay" id="mainmenu" >
+		<div data-role="panel" data-position="left" data-display="overlay" id="mainm" >
+        <div class="ui-panel-inner">
         <ul data-role="listview">
 		    <li><a href="#tableOfContent">فهرست</a></li>
 		    <li><a href="#callus">تماس با ما</a></li>
 		    <li><a href="#aboutp">درباره برنامه</a></li>
             
 	      </ul>
-          <a href="#my-header" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
+          <a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
     	</div>
+        </div>
       <p dir="RTL"><strong>ذخیره کردن بازی</strong><br>
           همانند بازی&nbsp;<span dir="LTR">Clash  of Clans</span><span dir="LTR">&nbsp;</span>در این بازی هم با اکانت<span dir="LTR"> </span><span dir="LTR"> </span><span dir="LTR"><span dir="LTR"> </span><span dir="LTR"> </span> Game Center </span>یا<span dir="LTR"> </span><span dir="LTR"> </span><span dir="LTR"><span dir="LTR"> </span><span dir="LTR"> </span> Google </span>در  اندروید می توانید بازی را ذخیره کنید. برای این کار به تنظیمات بازی رفته (تصویر  اول – گزینه 6) و روی<span dir="LTR"> </span><span dir="LTR"> </span><span dir="LTR"><span dir="LTR"> </span><span dir="LTR"> </span> Google+ Sign In </span>کلیک  نمایید. حال با خیال راحت بازی کنید و مطمئن باشید بازی ذخیره شده<span dir="LTR"> </span><span dir="LTR"> </span><span dir="LTR"><span dir="LTR"> </span><span dir="LTR"> </span>.</span> <br>
   <strong>دنبال کارگر اضافه نباشید!</strong><br>
@@ -196,21 +202,22 @@
 <div data-role="page" id="nokat" >
 	<div data-role="header" class="header" >
     	<div style="float: left;" >
-        	<a href="#mainmenu" ><div class="bars-top" ></div></a>
+        	<a href="#mainm" class="jqm-navmenu-link ui-nodisc-icon ui-alt-icon ui-btn-left ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
         </div>
         <h1>نکته هایی برای بهتر شدن</h1>
     </div>
     <div data-role="content" class="content" >
-    <div data-role="panel" data-position="left" data-display="overlay" id="mainmenu" >
+    <div data-role="panel" data-position="left" data-display="overlay" id="mainm" >
+        <div class="ui-panel-inner">
         <ul data-role="listview">
 		    <li><a href="#tableOfContent">فهرست</a></li>
 		    <li><a href="#callus">تماس با ما</a></li>
 		    <li><a href="#aboutp">درباره برنامه</a></li>
             
 	      </ul>
-          <a href="#my-header" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
+          <a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
     	</div>
-        ٰ
+        ٰ</div>
         <p dir="RTL">در این بازی نیز مانند <span dir="LTR">Clash Of Clans</span><span dir="RTL"> </span><span dir="RTL"> </span><span dir="RTL"> </span><span dir="RTL"> </span> باید برای به دست آوردن  منابع بیشتر به جزیره های اطراف خود بروید و ترجیحا برای اینکه از این جنگ ضرر  نکنید، بتوانید این جزیره را با خاک یکسان کنید! مهم ترین چیزی که باید یادتان  باشد اینست که در واقع شما برای اینکه تجهیزات دفاعی بهتری داشته باشید، مبارزه  میکنید. پس برای جلوگیری از با خاک یکسان شدن های آینده (هر لحظه ممکن است کاربری  به شما حمله کند) باید نکاتی را در پیش بگیرید:<br>
           <strong><span dir="LTR">Sawmill</span></strong><span dir="RTL"> </span><span dir="RTL"> </span><strong><span dir="RTL"> </span><span dir="RTL"> </span> ها (کارخانه های چوب) را  هر چه سریعتر آپگرید کنید!</strong><br>
           به طور کلی شما هر چیزی را که بخواهید در بوم بیچ بسازید باید از چوب  ها استفاده کنید. پس یعنی اگر شما چوبی برای خودتان نداشته باشید عملا نمیتوانید  چیزی بسازید و اگر کمی عجله را هم چاشنی کار خود کنید باید از الماس های خود  بیهوده خرج کنید. پس ساختن چوب بری هایی که به طور متوالی چوب های رایگان به شما  عرضه میکنند راهی مناسب برای صرفه جویی در الماس هاست!<br>
@@ -242,20 +249,22 @@
 <div data-role="page" id="strateji" >
 	<div data-role="header" class="header">
     <div style="float: left;" >
-			<a href="#mainmenu"><div class="bars-top" ></div></a>
+			<a href="#mainm" class="jqm-navmenu-link ui-nodisc-icon ui-alt-icon ui-btn-left ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
 		</div>
     	<h1>بهترین استراتژی</h1>
     </div>
     <div data-role="content" class="content">
-    	<div data-role="panel" data-position="left" data-display="overlay" id="mainmenu" >
+    	<div data-role="panel" data-position="left" data-display="overlay" id="mainm" >
+        <div class="ui-panel-inner">
         <ul data-role="listview">
 		    <li><a href="#tableOfContent">فهرست</a></li>
 		    <li><a href="#callus">تماس با ما</a></li>
 		    <li><a href="#aboutp">درباره برنامه</a></li>
             
 	      </ul>
-          <a href="#my-header" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
+          <a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
     	</div>
+        </div>
       <p dir="RTL">به طور کلی استراتژی اصلی برای بازی را شما تعیین میکنید! یعنی طریقه  ی چینش و نوع حمله. در اینجا من اشاره به مواردی میکنم که شما بتوانید با به کار  گیری این موارد بهترین نتیجه را از بازی بگیرید!<br>
           <strong>درختان مکان های مناسبی برای پنهان شدن هستند!</strong><strong><span dir="LTR"> </span></strong><br>
           اصلا به نظر من درختان بیشتر به جای اینکه منابعی برای تهیه چوب  باشند، مکانی برای استتار میباشند! مثلا میتوانید درختانی را در وسط جنگل خود قطع  کنید و خانه اصلی خود <span dir="LTR"> </span><span dir="LTR"> </span><span dir="LTR"><span dir="LTR"> </span><span dir="LTR"> </span>(HQ)</span><span dir="RTL"> </span><span dir="RTL"> </span><span dir="RTL"> </span><span dir="RTL"> </span> را در میان این درختان جا  سازی کنید! برای محکم کاری هم میتوانید ابزار های دفاعی خود را جوری تعیین موقعیت  کنید که بتوانند از هر طرف از خانه اصلی خود حفاظت کنند. در صورتی که یک مورتار  بیشتر ندارید آنرا در جلوی خانه اصلی خود قرار دهید و بعدا که مورتار های بیشتری  خریدید طوری آنها را بچینید که هر یک دیگری را پوشش دهد و در این صورت سربازانی به  صورت زنده باقی نمیمانند که بخواهند به خانه شما حمله کنند!<br>
@@ -275,60 +284,65 @@
 <div data-role="page" id="naghshe" >
 	<div data-role="header" class="header">
     <div style="float: left;" >
-			<a href="#mainmenu"><div class="bars-top" ></div></a>
+			<a href="#mainm" class="jqm-navmenu-link ui-nodisc-icon ui-alt-icon ui-btn-left ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
 		</div>
     <h1>نقشه های دفاعی</h1>
     </div>
     <div data-role="content" class="content">
-    	<div data-role="panel" data-position="left" data-display="overlay" id="mainmenu" >
+    	<div data-role="panel" data-position="left" data-display="overlay" id="mainm" >
+        <div class="ui-panel-inner">
         <ul data-role="listview">
 		    <li><a href="#tableOfContent">فهرست</a></li>
 		    <li><a href="#callus">تماس با ما</a></li>
 		    <li><a href="#aboutp">درباره برنامه</a></li>
 	      </ul>
-          <a href="#my-header" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
+          <a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
     	</div>
+        </div>
     </div>
 </div>
 
 <div data-role="page" id="character" >
 	<div data-role="header" class="header">
     	<div style="float: left;" >
-			<a href="#mainmenu"><div class="bars-top" ></div></a>
+			<a href="#mainm" class="jqm-navmenu-link ui-nodisc-icon ui-alt-icon ui-btn-left ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
 		</div>
     	<h1>کاراکتر ها</h1>
     </div>
-    <div data-role="content" class="content">
-    	<div data-role="panel" data-position="left" data-display="overlay" id="mainmenu" >
+    <div data-role="content" style="margin-top: 44.5px;" >
+    	<div data-role="panel" data-position="left" data-display="overlay" id="mainm" >
+        <div class="ui-panel-inner">
         <ul data-role="listview">
 		    <li><a href="#tableOfContent">فهرست</a></li>
 		    <li><a href="#callus">تماس با ما</a></li>
 		    <li><a href="#aboutp">درباره برنامه</a></li>
 	      </ul>
-          <a href="#my-header" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
+          <a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
     	</div>
+        </div>
     	<ul data-role="listview">
     	  <li><a href="#Rifleman">تفنگدار (Rifleman)</a></li>
   	  </ul>
-        
     </div>
 </div>
 
 <div data-role="page" id="Rifleman" >
 	<div data-role="header" class="header" >
    		<div style="float: left;" >
-			<a href="#mainmenu"><div class="bars-top" ></div></a>
+			<a href="#mainm" class="jqm-navmenu-link ui-nodisc-icon ui-alt-icon ui-btn-left ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
 		</div>
     <h1>تفنگدار (Rifleman)</h1>
     </div>
     <div data-role="content" class="content" >
-    <div data-role="panel" data-position="left" data-display="overlay" id="mainmenu" >
+    <div data-role="panel" data-position="left" data-display="overlay" id="mainm" >
+        <div class="ui-panel-inner">
         <ul data-role="listview">
 		    <li><a href="#tableOfContent">فهرست</a></li>
 		    <li><a href="#callus">تماس با ما</a></li>
 		    <li><a href="#aboutp">درباره برنامه</a></li>
 	      </ul>
-          <a href="#my-header" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
+          <a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
+    </div>
     </div>
     <center><img src="images/Rifleman_Troop17b.png" width="30%" /></center>
     <p dir="RTL">این تفنگدار ها را میتوان در دسته پیاده نظام جای داد. این سربازان در  برابر آتش دشمنان مقاومت متوسطی از خودشان نشان میدهند ولی در صورتی که از آنها به  درستی استفاده کنید میتوانید جزیره های اطراف را به راحتی به تسخیر خود در  بیاورید.<br>
@@ -607,18 +621,20 @@
 <div data-role="page" id="callus" >
 	<div data-role="header" class="header" >
     <div style="float: left;" >
-			<a href="#mainmenu"><div class="bars-top" ></div></a>
+			<a href="#mainm" class="jqm-navmenu-link ui-nodisc-icon ui-alt-icon ui-btn-left ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
 	</div>
     <h1>تماس با ما</h1>
     </div>
     <div data-role="content" class="content">
-    <div data-role="panel" data-position="left" data-display="overlay" id="mainmenu" >
+    <div data-role="panel" data-position="left" data-display="overlay" id="mainm" >
+        <div class="ui-panel-inner">
         <ul data-role="listview">
 		    <li><a href="#tableOfContent">فهرست</a></li>
 		    <li><a href="#aboutp">درباره برنامه</a></li>
 	      </ul>
-          <a href="#my-header" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
+          <a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
     	</div>
+        </div>
       <p dir="RTL">همانطور که در بخش شاید برای شما هم پیش بیاید اشاره شد از طریق این  قسمت میتوانید انتقاد ها، پیشنهاد ها و سوال های خود را که با بازی ارتباط دارند  را مطرح کرده و در آپدیت های بعدی برنامه تغییرات اعمال شده را مشاهده کنید!<br></p>
           <p dir="ltr" >Mail: <a href="mailto:a.mohamadi@outlook.com">a.mohamadi@outlook.com</a></p>
     </div>
@@ -627,17 +643,19 @@
 <div data-role="page" id="aboutp" >
 	<div data-role="header" class="header" >
     <div style="float: left;" >
-			<a href="#mainmenu"><div class="bars-top" ></div></a>
+			<a href="#mainm" class="jqm-navmenu-link ui-nodisc-icon ui-alt-icon ui-btn-left ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Menu</a>
 	</div>
     <h1>درباره برنامه</h1>
     </div>
     <div data-role="content" class="content" >
-    <div data-role="panel" data-position="left" data-display="overlay" id="mainmenu" >
+    <div data-role="panel" data-position="left" data-display="overlay" id="mainm" >
+        <div class="ui-panel-inner">
         <ul data-role="listview">
 		    <li><a href="#tableOfContent">فهرست</a></li>
 		    <li><a href="#callus">تماس با ما</a></li>
 	      </ul>
-          <a href="#my-header" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
+          <a href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right close-panel" data-rel="close">بستن پنل</a>
+    </div>
     </div>
     <p dir="RTL">امروزه بازی های استراتژیکی بخش بزرگی از زندگی همه اقشار را تشکیل  میدهد. پس چرا ما نیز به این قشر عظیم نپیوندیم و از بازی کردن با کسانی که آنها  را نمیشناسیم لذت ببریم و رتبه خود را در میان دیگران مشاهده کنیم و با دوستان خود  به اشتراک نگذاریم؟! در حقیقت این بازی ها به نظر من ضرر که ندارند بلکه میتوانند  به شما بیاموزند که در مواقع مختلف شما باید چه رفتاری از خود نشان دهید.<br>
       تجربه ها را میتوان از دو راه به دست آورد! از تجربه دیگران استفاده  کرد و یا اینکه خود نیز همان راه دیگران را ادامه داده تا به آن تجربه ها دست پیدا  کنید! طبیعی است که راه اول بسیار بهتر است. برای همین هم این برنامه آموزشی آماده  شده است تا شما استفاده کنید و از هم رده ای های خود یک قدم جلوتر باشید!</p>
